@@ -1,5 +1,5 @@
-const model = require('../../model/artist/index')
-const { ObjectId } = require('mongodb')
+const model = require('../../model/artist/index');
+const { ObjectId } = require('mongodb');
 
 module.exports = async (req, res, next) => {
   try {
