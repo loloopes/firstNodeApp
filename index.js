@@ -1,6 +1,6 @@
 const express = require('express');
 const error = require('./middleware/error')
-const artist = require('./controller/artist/router')
+const root = require('./controller/router')
 
 const PORT = 3000;
 
@@ -10,10 +10,10 @@ app.use(express.json());
 
 // here goes our endpoints
 
-app.use('/artist', artist)
+app.use(root);
 
 //
 
-app.use(error)
+app.use(error);
 
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
