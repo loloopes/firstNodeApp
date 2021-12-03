@@ -1,4 +1,5 @@
-const model = require('../../model/artist/index')
+const model = require('../../model/artist/index');
+const statusCode = require('http-status-codes').StatusCodes;
 
 module.exports = async (req, res, next) => {
   try {
@@ -8,7 +9,7 @@ module.exports = async (req, res, next) => {
 
     await model.remove(id);
 
-    return res.status(204).end();
+    return res.status(statusCode.NO_CONTENT).end();
   } catch (err) {
     next(err);
   }

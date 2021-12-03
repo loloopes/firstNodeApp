@@ -1,4 +1,5 @@
 const model = require('../../model/artist/index');
+const statusCodes = require('http-status-codes').StatusCodes;
 
 module.exports = async (req, res, next) => {
   try {
@@ -13,7 +14,7 @@ module.exports = async (req, res, next) => {
 
     // if (!artist) res.status(404).end()
 
-    return res.status(201).send(newArtist);
+    return res.status(statusCodes.OK).send(newArtist);
   } catch (err) {
     next(err);
   };

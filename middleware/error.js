@@ -1,4 +1,6 @@
-module.exports = (err, req, res, next) => {
+const statusCode = require('http-status-codes').StatusCodes;
+
+module.exports = (err, _req, res, _next) => {
   console.error(err.message)
-  res.status(500).end()
+  res.status(statusCode.INTERNAL_SERVER_ERROR).end()
 }

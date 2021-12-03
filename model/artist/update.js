@@ -1,6 +1,5 @@
 const connection = require('../connection');
-const { ObjectId } = require('mongodb')
-
+const { ObjectId } = require('mongodb');
 module.exports = async (artist) => {
   const { _id, ...artistWithoutId } = artist;
   // console.log(_id)
